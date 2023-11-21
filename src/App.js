@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './css/style.scss';
+import './css/main.scss';
+
+
+// components
+
+import Background from './components/Background';
+import Table_grid from './components/Table_grid';
+import Grida from './components/Grid';
+import FAQ from './components/FAQ';
+import Comments from './components/Сomments';
+import FormFooter from './components/FormFooter';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App wrapper">
+      <Background/>
+      <Grida />
+      <Table_grid />
+      <FAQ />
+      <Comments/>
+      <FormFooter/>
     </div>
   );
 }
