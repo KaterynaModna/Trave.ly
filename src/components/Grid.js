@@ -13,7 +13,7 @@ export default function Grida() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "405ccbe9d4mshe8fab5fa4dec266p1e9552jsn6e02b329382c",
+        "X-RapidAPI-Key": "f035d71de5msh5a23e39e52fa392p1138bdjsn958b7ca3fd83",
         "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
       }
     };
@@ -31,6 +31,10 @@ export default function Grida() {
       setPhoto(photoUrls);
       console.log(nameUrl);
       setName(nameUrl);
+
+      if (!name) {
+        return null
+    }
 
     } catch (error) {
       console.error(error);
@@ -92,24 +96,6 @@ export default function Grida() {
         </div>
       </div>
     </section>
-    //     <Container>
-    //     <Grid container spacing={2}>
-    //   <Grid item xs={8}> />
-    //   </Grid>
-    //   <Grid item xs={4}>
-    //   <img src={photo[23]} />
-    //   </Grid>
-    //   <Grid item xs={3}>
-    //   <img src={photo[23]} />
-    //   </Grid>
-    //   <Grid item xs={6}>
-    //   <img src={photo[23]} />
-    //   </Grid>
-    //   <Grid item xs={3}>
-    //   <img src={photo[23]} />
-    //   </Grid>
-    // </Grid>
-    // </Container>
   )
 }
 

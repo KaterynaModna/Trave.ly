@@ -1,0 +1,77 @@
+@media (max-width:560px) {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+
+    .section_little_text,
+    .answer {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:968px) {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+    .header {
+
+    }
+
+    .section_little_text,
+    .answer {
+        font-size: 14px;
+    }
+
+    .main_p {
+        display: none;
+    }
+}
+
+@media (max-width:1200px) {
+
+    html,
+    body {
+        font-size: 16px;
+    }
+
+    .section_little_text,
+    .answer {
+        font-size: 16px;
+    }
+
+    .answer_wrapper {
+        max-width: 550px;
+        padding: 24px;
+    }
+
+    .question {
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+        width: 517px;
+    }
+
+    .questions {
+        min-width: 700px;
+    }
+
+    h1 {
+        font-size: 65px;
+    }
+
+    .section_name {
+        font-size: 45px;
+    }
+
+    .answer {
+        max-width: 600px;
+    }
+
+    .table_booking {
+        font-size: 55px;
+    }
+}
