@@ -9,6 +9,39 @@
     .answer {
         font-size: 14px;
     }
+    .header {
+        background: url(../img/Mobile_back.webp);
+    }
+
+    .answer_wrapper {
+        max-width: 550px;
+        padding: 24px;
+    }
+
+    .question {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        width: 517px;
+    }
+
+    .questions {
+        min-width: 700px;
+    }
+
+    span.kursiv {
+        display: none;
+    }
+
+
+    .section_name {
+        font-size: 45px;
+    }
+
+    .answer {
+        max-width: 600px;
+    }
+
 }
 
 @media (max-width:968px) {
@@ -18,9 +51,12 @@
         font-size: 14px;
     }
     .header {
-
+        background: url(../img/tablet_back.webp);
     }
 
+    span.kursiv {
+        display: none;
+    }
     .section_little_text,
     .answer {
         font-size: 14px;
@@ -29,6 +65,12 @@
     .main_p {
         display: none;
     }
+}
+.reasons {
+    display: none;
+}
+.faq{
+    display: none;
 }
 
 @media (max-width:1200px) {

@@ -50,6 +50,7 @@ header {
     min-height: 100vh;
     align-items: center;
     color: #fff;
+    overflow: hidden;
     
 }
 
@@ -106,7 +107,7 @@ h1 {
     background-color: transparent;
     border: 1px solid #151515;
 }
-.complex_input button {
+.search_header_button {
     padding: 20px 60px;
     background-color: #fff;
     border: none;
@@ -188,6 +189,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 .grid_table_item{
     display: flex;

@@ -7,13 +7,13 @@ export default function Grida() {
   const [photo, setPhoto] = useState({});
   const [name, setName] = useState({});
   // const [attractions, setAttractions] = useState({});
-  const getData  = async () => {
+  const getData  = async (retryCount = 0) => {
     const url =
       "https://travel-advisor.p.rapidapi.com/attractions/list-by-latlng?longitude=109.19553&latitude=12.235588&lunit=km&currency=USD&lang=en_US";
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "f035d71de5msh5a23e39e52fa392p1138bdjsn958b7ca3fd83",
+        "X-RapidAPI-Key": "91da9aa27dmsh0e84e116373f303p16c0aajsnab04bc4070bf",
         "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
       }
     };
@@ -21,20 +21,29 @@ export default function Grida() {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      const photoUrls = result.data.map(
-        (item) => item.photo?.images?.large?.url
-      );
-      const nameUrl = result.data.map(
-        (item) => item.name
-      );
-      console.log(photoUrls);
-      setPhoto(photoUrls);
-      console.log(nameUrl);
-      setName(nameUrl);
 
-      if (!name) {
-        return null
-    }
+      if (response.status === 429) {
+        if (retryCount < 3) {
+          const waitTime = 5000;
+          console.log(`Rate limited. Retrying in ${waitTime / 1000} seconds...`);
+          setTimeout(() => getData(retryCount + 1), waitTime);
+          return;
+        } else {
+          console.error("Exceeded maximum retry attempts. Aborting.");
+        }
+      }
+
+
+      if (result.data) {
+        const photoUrls = result.data.map((item) => item.photo?.images?.large?.url);
+        const nameUrl = result.data.map((item) => item.name);
+        console.log(photoUrls);
+        setPhoto(photoUrls);
+        console.log(nameUrl);
+        setName(nameUrl);
+      } else {
+        console.error("Data is false or not in the expected format:", result);
+      }
 
     } catch (error) {
       console.error(error);

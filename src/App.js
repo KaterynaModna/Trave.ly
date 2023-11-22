@@ -20,7 +20,7 @@ function App() {
       <Grida />
       <Table_grid />
       <FAQ />
-      <Comments/>
+      {/* <Comments/> */}
       <FormFooter/>
     </div>
   );
