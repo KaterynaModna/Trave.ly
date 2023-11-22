@@ -1,68 +1,77 @@
 import { Autocomplete, TextField, FormControl, InputLabel, Select, MenuItem, IconButton } from "@mui/material"
 import { useState, useMemo, useEffect } from "react"
 
-const tourType = [
-  { label: '0-40$' },
-  { label: '41-300$' },
-  { label: '301-700$' },
-  { label: '701-1500$' },
+const tourCategory = [
+  { Attraction: 'Attraction' },
+  { Restaurant: 'Restaurant' },
+  { Hotel: 'Hotel' },
 ]
 export default function FormHeader() {
 
   const [photo, setPhoto] = useState({});
   const [name, setName] = useState({});
-  const [tour, setTour] = useState({});
-  const [price, setPrice] = useState('');
-  const getValue = async (retryCount = 0) => {
+  const [lokal, setLokal] = useState({});
+  const [category, setCategory] = useState('');
+  const [adsress, setAddress] = useState({});
+  // const [tour, setTour] = useState({});
+  // const [price, setPrice] = useState('');
+  const getValue = async () => {
 
-    console.log('куку');
 
     const url =
-      "https://travel-advisor.p.rapidapi.com/attractions/list?location_id=298571&currency=USD&lang=en_US&lunit=km&sort=recommended";
+      "https://travel-advisor.p.rapidapi.com/locations/search?query=toronto&limit=30&lang=en_US&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US";
 
+    // const url =
+    //   "https://travel-advisor.p.rapidapi.com/attractions/list?location_id=298571&currency=USD&lang=en_US&lunit=km&sort=recommended";
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "405ccbe9d4mshe8fab5fa4dec266p1e9552jsn6e02b329382c",
+        "X-RapidAPI-Key": "21b1fe863amsh2c0dda7615f4e4dp1f1e1bjsna2b768a014a5",
         "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
       }
     };
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-
-     
-      if (response.status === 429) {
-        if (retryCount < 3) {
-          const waitTime = 5000;
-          console.log(`Rate limited. Retrying in ${waitTime / 1000} seconds...`);
-          setTimeout(() => getValue(retryCount + 1), waitTime);
-          return;
-        } else {
-          console.error("Exceeded maximum retry attempts. Aborting.");
-        }
-      }
-    
-      if (result.data) {
         const photoUrls = result.data.map(
-          (item) => item.photo?.images?.large?.url
+          (item) => item.rezult_object?.photo?.images?.large?.url
         );
         const nameUrl = result.data.map(
-          (item) => item.name
+          (item) => item.rezult_object?.name
         );
-        const priceUrl = result.data.map(
-          (item) => item.offer_group?.offer_list?.item[0]?.rounded_up_price
+        const lokalUrl = result.data.map(
+          (item) => item.rezult_object?.lokation_string
         );
+        const categoryUrl = result.data.map(
+          (item) => item.rezult_object?.category?.name
+        );
+        const addressUrl = result.data.map(
+          (item) => item.rezult_object?.address_obj?.address
+        );
+        // const priceUrl = result.data.map((item) => {
+        //   if (
+        //     item &&
+        //     item.offer_group &&
+        //     item.offer_group.lowest_price
+        //   ) {
+        //     return item.offer_group.lowest_price;
+        //   } else {
+        //     return null; 
+        //   }
+        // });
     
         console.log(photoUrls);
         setPhoto(photoUrls);
         console.log(nameUrl);
         setName(nameUrl);
-        console.log(priceUrl);
-        setPrice(priceUrl);
-      } else {
-        console.error('No data in the API response');
-      }
+        console.log(lokalUrl);
+        setLokal(lokalUrl);
+        console.log(categoryUrl);
+        setCategory(categoryUrl);
+        console.log(addressUrl);
+        setAddress(addressUrl);
+        // console.log(priceUrl);
+        // setPrice(priceUrl);
     } catch (error) {
       console.error(error);
     }
@@ -74,7 +83,7 @@ export default function FormHeader() {
 
   const [searchData, setSearchData] = useState('')
   const selectedValues = useMemo(
-    () => tourType.filter((v) => v.label === searchData),
+    () => tourCategory.filter((v) => v.label === searchData),
     [searchData],
   );
   const onSubmitHandler = (e) => {
@@ -88,7 +97,7 @@ export default function FormHeader() {
   return (
     <form className="complex_input" onSubmit={onSubmitHandler}>
      
-      <FormControl fullWidth>
+      {/* <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Price</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -99,8 +108,6 @@ export default function FormHeader() {
         >
           <MenuItem value={10}>0-40</MenuItem>
           <MenuItem value={20}>41-300</MenuItem>
-          <MenuItem value={30}>301-700</MenuItem>
-          <MenuItem value={30}>701-1500</MenuItem>
         </Select>
       </FormControl>
 
@@ -112,7 +119,7 @@ export default function FormHeader() {
         onChange={(_, newValue) => setSearchData(newValue)}
         renderInput={(params) => <TextField {...params} label="Type" />}
         
-      />
+      /> */}
 
 
       <button className="search_header_button" type="submit">search</button>
