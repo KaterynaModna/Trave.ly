@@ -14,6 +14,9 @@ export default function FormHeader() {
   const [tour, setTour] = useState({});
   const [price, setPrice] = useState('');
   const getValue = async (retryCount = 0) => {
+
+    console.log('куку');
+
     const url =
       "https://travel-advisor.p.rapidapi.com/attractions/list?location_id=298571&currency=USD&lang=en_US&lunit=km&sort=recommended";
 
@@ -28,7 +31,7 @@ export default function FormHeader() {
       const response = await fetch(url, options);
       const result = await response.json();
 
-      
+     
       if (response.status === 429) {
         if (retryCount < 3) {
           const waitTime = 5000;
