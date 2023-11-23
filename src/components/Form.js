@@ -1,10 +1,5 @@
 import { useState } from "react"
 
-// const UserObject = {
-//     user_name: 'Margaret Brown',
-//     user_phone: '+380666666666',
-//     user_email: 'margaret_b@gmail.com'
-// }
 
 export default function UserForm() {
 
@@ -16,14 +11,7 @@ const {value, name} = e.target;
         [name]: value
     })
 }
-    
-    // const { register, handleSubmit, formState: { errors } } = useForm({
-    //     defaultValues: {...userObj}
-    // });
-
-    // const onSubmitHandler = (data) => {
-    //     console.log(data);
-    // }
+ 
 
 return (
     <form >

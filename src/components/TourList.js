@@ -26,8 +26,6 @@ export default function TourList({ data }) {
           spaceBetween: 50,
         },
       }}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       {data.map((data, index) => (
         <SwiperSlide key={index}>
