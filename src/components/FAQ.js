@@ -32,17 +32,17 @@ answer={item.answer} />)
 export default function FAQ() {
 
 
-    return (
-        <section className="faq">
-            <div className="section_main_text_wrapper">
-                <h3 className="section_name">FAQ</h3>
-                <span className="section_little_text">Find quick answers to common travel-related questions. Explore our
-                    FAQs to get the information
-                    you need for a seamless travel experience.</span>
-            </div>
-            <div className="questions">
-                {QuestionResults}
-            </div>
-        </section>
-    )
+    // return (
+    //     <section className="faq">
+    //         <div className="section_main_text_wrapper">
+    //             <h3 className="section_name">FAQ</h3>
+    //             <span className="section_little_text">Find quick answers to common travel-related questions. Explore our
+    //                 FAQs to get the information
+    //                 you need for a seamless travel experience.</span>
+    //         </div>
+    //         <div className="questions">
+    //             {QuestionResults}
+    //         </div>
+    //     </section>
+    // )
 }

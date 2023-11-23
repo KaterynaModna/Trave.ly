@@ -1,0 +1,525 @@
+@font-face {
+  font-family: "PP Editorial Old";
+  src: url("../fonts/PPEditorialOld-Italic.woff2") format("woff2"), url("../fonts/PPEditorialOld-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #151515;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 150px;
+  height: 65px;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+}
+
+.youtube {
+  width: 49px;
+  height: 44px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  align-items: center;
+  color: #fff;
+}
+
+.navi_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 55px 60px 0;
+}
+
+.icon_wrapper {
+  display: flex;
+  gap: 16px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 110px;
+  max-width: 1345px;
+  margin-top: 153px;
+}
+
+.main_p {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 153px;
+}
+
+.kursiv {
+  font-family: "PP Editorial Old", sans-serif;
+}
+
+.complex_input {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  background: #788d8b;
+  margin: 100px auto 150px;
+  padding: 10px 16px 10px 40px;
+  border-radius: 50px;
+}
+
+.select_item {
+  background-color: transparent;
+  border: 1px solid #151515;
+}
+
+.search_header_button {
+  padding: 20px 60px;
+  background-color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.grid {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 25% 1fr 1fr 1fr 25%;
+  grid-template-rows: 2;
+  gap: 2px;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.box {
+  min-height: 100px;
+}
+
+.g1 {
+  grid-column: 1/4;
+  grid-row: 1;
+  position: relative;
+}
+
+.g2 {
+  grid-column: 4/6;
+  grid-row: 1;
+  position: relative;
+}
+
+.g3 {
+  grid-column: 1;
+  grid-row: 2;
+  position: relative;
+}
+
+.g4 {
+  grid-column: span 3;
+  grid-row: 2;
+  position: relative;
+}
+
+.g5 {
+  grid-column: 5;
+  grid-row: 2;
+  position: relative;
+}
+
+.grid_img {
+  max-height: 435px;
+  width: 100%;
+  height: 100%;
+  max-width: 1100px;
+}
+
+.grid_table {
+  display: grid;
+  grid-template-columns: 26% 37% 37%;
+  grid-template-rows: repeat(3, 360px);
+  max-width: 1800px;
+}
+
+.reasons {
+  margin-top: 234px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 262px;
+}
+
+.table_text_wrapper {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table_main_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.grid_table_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #151515;
+  padding: 35px;
+}
+
+.one {
+  grid-column: 1/2;
+  border-radius: 72px 72px 0px 0px;
+}
+
+.two {
+  grid-column: 2/5;
+  border: none;
+}
+
+.three {
+  grid-column: 1/2;
+  border-radius: 0px 0px 0px 72px;
+}
+
+.four {
+  grid-column: 2/3;
+}
+
+.five {
+  grid-column: 3/4;
+  border-radius: 0px 72px 0px 0px;
+  border-bottom: none;
+}
+
+.six {
+  grid-column: 2/3;
+  border-radius: 0px 0px 0px 72px;
+  border-right: none;
+}
+
+.seven {
+  display: flex;
+  align-items: center;
+  border-radius: 0px 0px 72px 0px;
+  background-color: #151515;
+}
+
+a {
+  display: block;
+  cursor: pointer;
+}
+
+.table_main_text {
+  font-family: "PP Editorial Old", sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 400;
+  max-width: 520px;
+}
+.table_main_text.two {
+  font-size: 60px;
+}
+
+.main_kurs {
+  font-size: 64px;
+}
+
+.table_mini_text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(21, 21, 21, 0.5);
+}
+
+.table_booking {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.grid_table_item.two {
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section_main_text_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 72px;
+}
+
+.section_name {
+  font-family: "PP Editorial Old", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.section_little_text, .answer {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(21, 21, 21, 0.5);
+  max-width: 655px;
+  line-height: 24px;
+  letter-spacing: -0.4px;
+}
+
+section, .form_section {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  max-width: 770px;
+}
+
+.answer {
+  max-width: 770px;
+}
+
+.answer_wrapper {
+  max-width: 800px;
+  padding: 35px;
+  border: 1px solid #151515;
+  border-radius: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  background-color: #FFFDFD;
+}
+
+.chevron {
+  width: 24px;
+  height: 24px;
+  background-color: #FFFDFD;
+  color: #151515;
+  border: none;
+  margin-left: 24px;
+}
+
+.questions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1800px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form_wrapper {
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 660px;
+}
+
+.form_section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form_input {
+  padding: 20px 60px;
+  max-width: 662px;
+  border-radius: 20px;
+  border: 1px solid #151515;
+}
+
+.form_button {
+  max-width: 662px;
+  padding: 20px 60px;
+  color: #fff;
+  text-align: center;
+  background-color: #151515;
+  border-radius: 20px;
+}
+
+.user_photo {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.card_header_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card_head_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card_main_text {
+  margin-top: 16px;
+  line-height: 24px;
+  letter-spacing: -0.4px;
+}
+
+.comment_insta {
+  width: 16px;
+  height: 16px;
+}
+
+.comment_header {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.insta_nick {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.insta_nick_text {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.one_card {
+  position: relative;
+  min-width: 0;
+  width: 562px;
+  height: 340px;
+  padding: 40px;
+  border: 1px solid #151515;
+  border-radius: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.see_all {
+  background-color: #fff;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(21, 21, 21, 0.5);
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.cards {
+  min-width: 0;
+  overflow: hidden;
+  gap: 24px;
+}
+.cards .slick-arrow {
+  width: 64px;
+  height: 64px;
+  min-width: 0;
+}
+.cards .all_comments {
+  display: flex;
+}
+.cards .slick-prev {
+  left: 10px;
+  background: url("../img/left_arrow.png");
+}
+.cards .slick-next {
+  right: 10px;
+  background: url("../img/right_arrow.png");
+}
+
+.card_section {
+  margin-top: 220px;
+  margin-bottom: 180px;
+}
+
+.grid_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+  transition: 1s;
+}
+
+.grid_img:hover {
+  filter: brightness(100%);
+}
+
+.attraction_name {
+  color: #FFFDFD;
+  font-family: "Inter", sans-serif;
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: 500;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 24px;
+  padding-left: 24px;
+}
+
+.tour_photo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.tour_photo_wrapper {
+  width: 300px;
+  height: 200px;
+}
+
+.tour_list {
+  display: flex;
+}
+
+.tourcard_name {
+  min-height: 150px;
+}
+
+.tourcard_lokal {
+  min-height: 70px;
+}
+
+.tourcard {
+  max-height: 500px;
+}
+
+.grid_for_mobile {
+  display: none;
+}

@@ -41,8 +41,32 @@
     .answer {
         max-width: 600px;
     }
-
+.complex_input{
+   width:90%
 }
+h1{
+    font-size: 35px;
+}
+.icon_wrapper{
+    display: none;
+}
+.section_main_text_wrapper{
+    flex-direction: column;
+}
+.grid {
+   display: none;
+  }
+.grid_for_mobile{
+    display: grid;
+    grid-template-columns: repeat(3fr 100px);
+    gap: 2px;
+    height: 100%;
+    border-radius: 30px;
+}
+.mobile_wrapper{
+    min-height: 100px;
+    position: relative;
+  }
 
 @media (max-width:968px) {
 
@@ -53,7 +77,6 @@
     .header {
         background: url(../img/tablet_back.webp);
     }
-
     span.kursiv {
         display: none;
     }
@@ -72,7 +95,9 @@
 .faq{
     display: none;
 }
-
+.search_header_button{
+    padding: 15px 40px;
+}
 @media (max-width:1200px) {
 
     html,
@@ -116,4 +141,5 @@
     .table_booking {
         font-size: 55px;
     }
+}
 }

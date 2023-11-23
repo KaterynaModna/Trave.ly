@@ -1,5 +1,4 @@
 import NaviHeader from './Navi';
-import FormHeader from './FormHeader';
 export default function Background(){
     return(
         <header>
@@ -11,7 +10,6 @@ export default function Background(){
                 Journey
             </h1>
             <p className="main_p">Discover the World with Trave.ly</p>
-            <FormHeader/>
             {/* <div className="complex_input">
 
                 <div className="input_elements">
