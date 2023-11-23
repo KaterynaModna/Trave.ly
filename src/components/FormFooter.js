@@ -31,7 +31,7 @@ export default function FormFooter() {
 
 
     return (
-        <form className="form_section">
+        <form className="form_section" id="form_section">
             <div className="section_main_text_wrapper">
                 <h3 className="section_name">Fill Out the Form</h3>
                 <span className="section_little_text">Write a brief description of your needs and receive a detailed

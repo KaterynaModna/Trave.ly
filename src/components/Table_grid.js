@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 export default function Table_grid() {
     return (
         <section className="reasons">
@@ -55,7 +57,7 @@ export default function Table_grid() {
                     </div>
                 </div>
                 <div className="grid_table_item seven">
-                    <a href="#">
+                    <a href="#form_section">
                         <h5 className="table_booking">Book tour</h5>
                     </a>
                 </div>
